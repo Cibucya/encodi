@@ -1,8 +1,6 @@
-#include <iostream>
+#include "argument_parser.h"
 
-using namespace std;
-
-int main(void) {
-	cout << "Hello world\n";
+int main(int argc, char* argv[]) {
+	parse_args(argc, argv);
 	return 0;
 }
