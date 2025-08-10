@@ -7,9 +7,10 @@
 #include "credentials/account.h"
 
 #include <iostream>
+#include <string>
 
-void add_account_credential_cli() {
-	if (add_account_credentials() == 0) {
+void add_account_credentials_cli(std::string name, std::string username, std::string password) {
+	if (add_account_credentials(name, username, password) == 0) {
 		std::cout << "Account credential succesfully added\n";
 	}
 	else {

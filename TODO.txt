@@ -1,0 +1,3 @@
+TODO:
+add -h and --help options
+rewrite command parser to make code readable and not get bullied by anyone who reads it
