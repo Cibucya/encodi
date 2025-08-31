@@ -2,9 +2,9 @@
  * fully complete the command user asked for.
  * */
 
-#include "credentials/cli/account.h"
+#include "credentials/cli/account.hpp"
 
-#include "credentials/account.h"
+#include "credentials/account.hpp"
 
 #include <iostream>
 #include <string>

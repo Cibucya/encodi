@@ -12,7 +12,7 @@ include_directories(include)
 # Sources
 set(SOURCES
 	src/main.cpp
-	src/argument_parser.cpp
+	src/flag_parser.cpp
 	src/credentials/account.cpp
 	src/credentials/cli/account.cpp
 )
