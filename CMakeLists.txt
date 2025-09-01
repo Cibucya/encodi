@@ -12,7 +12,9 @@ include_directories(include)
 # Sources
 set(SOURCES
 	src/main.cpp
-	src/flag_parser.cpp
+	src/flags/help.cpp
+	src/flags/flags_info.cpp
+	src/flags/flag_parser.cpp
 	src/credentials/account.cpp
 	src/credentials/cli/account.cpp
 )

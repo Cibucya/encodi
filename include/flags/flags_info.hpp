@@ -1,0 +1,19 @@
+#ifndef FLAGS_INFO_HPP
+#define FLAGS_INFO_HPP
+
+#include <string>
+#include <unordered_map>
+#include <functional>
+
+#include "flags/help.hpp"
+
+struct FlagInfo {
+	std::string name;
+	std::string arguments;
+	std::string description;
+	std::function<void()> handler; // Function to execute this flag
+};
+
+extern const std::unordered_map<char, FlagInfo> supported_flags;
+
+#endif // FLAGS_INFO_HPP

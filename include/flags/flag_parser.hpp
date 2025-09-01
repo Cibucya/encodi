@@ -12,6 +12,6 @@ struct Argument {
 
 std::unordered_map<char,std::vector<std::string>> get_flags(const int& argc, char* argv[]);
 
-// std::unordered_map<char,Argument> get_args(int argc, char* argv[]);
+void parse_flags(const std::unordered_map<char,std::vector<std::string>>& flags);
 
 #endif // ARGUMENT_PARSER_HPP
