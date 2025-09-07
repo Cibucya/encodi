@@ -1,7 +1,7 @@
 #include <unordered_map>
 
 #include "flags/flags_info.hpp"
-#include "flags/help.hpp"
+#include "flags/helpers.hpp"
 
 const std::unordered_map<char, FlagInfo> supported_flags {
     { 'h', {"help", "", "Shows this message.", show_general_help} },

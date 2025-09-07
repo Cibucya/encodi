@@ -1,4 +1,4 @@
-#include "flags/help.hpp"
+#include "flags/helpers.hpp"
 #include "flags/flags_info.hpp"
 
 #include <iostream>
@@ -13,4 +13,8 @@ void show_general_help() {
 		cout << '-' << opt.first << " --" << opt_data.name << ' ' << opt_data.arguments << '\t'
 			 << opt_data.description << '\n';
 	}
+}
+
+void show_in_development_msg(char flag) {
+	cout << "flag -" << flag << " is currently being developed and is not available right now :(\n";
 }

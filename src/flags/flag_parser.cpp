@@ -20,18 +20,13 @@ std::unordered_map<char,std::vector<std::string>> get_flags(const int& argc, cha
 			// Going through each option
 			for (int j = 1; j < arg.size(); ++j) {
 				opt = arg[j];
-				std::cout << "i: " << i << '\n';
-				std::cout << "j: " << j << '\n';
 
 				// Given option is unique?
 				if (flags.find(opt) == flags.end()) {
-					std::cout << "inserting flag -" << opt << '\n';
 					// Insert current option
 					flags[opt];
-					std::cout << "is inserted?: " << ((flags.find(opt) != flags.end()) ? "true" : "false") << '\n';
 					continue;
 				}
-				std::cout << std::endl;
 			}
 		}
 		else {
@@ -51,23 +46,10 @@ std::unordered_map<char,std::vector<std::string>> get_flags(const int& argc, cha
 void parse_flags(const std::unordered_map<char,std::vector<std::string>>& flags) {
 	bool show_help = false;
 
-	std::cout << "given:\n";
-	for (const auto& flag : flags) {
-		std::cout << "flag.first: " << flag.first << '\n';
-	}
-	std::cout << "\n";
-
-	std::cout << "supported:\n";
-	for (const auto& flag : supported_flags) {
-		std::cout << "flag.first: " << flag.first << '\n';
-	}
-
 	// Iterate through each flag
 	for (const auto& flag : flags) {
 		char opt = flag.first;
 		bool found = false;
-
-		std::cout << "current option: -" << opt << '\n';
 
 		// If current flag is supported
 		if (supported_flags.find(opt) != supported_flags.end()) {
@@ -80,8 +62,7 @@ void parse_flags(const std::unordered_map<char,std::vector<std::string>>& flags)
 			show_help = true;
 	}
 
-	if (show_help) {
-		std::cout << "printfing help.\n";
+	if (show_help && flags.find('h') != flags.end()) {
 		supported_flags.at('h').handler();
 	}
 }

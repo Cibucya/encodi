@@ -5,7 +5,7 @@
 
 int main(int argc, char* argv[]) {
 	auto arguments = get_flags(argc, argv);
-	parse_flags(get_flags(argc, argv));
+	parse_flags(arguments);
 
 /*
 	for (const auto& it : arguments) {

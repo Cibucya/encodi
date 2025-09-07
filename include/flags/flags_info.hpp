@@ -5,7 +5,7 @@
 #include <unordered_map>
 #include <functional>
 
-#include "flags/help.hpp"
+#include "flags/helpers.hpp"
 
 struct FlagInfo {
 	std::string name;
