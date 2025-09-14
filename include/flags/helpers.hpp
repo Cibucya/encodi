@@ -1,7 +1,10 @@
-#ifndef HELP_HPP
-#define HELP_HPP
+#ifndef HELPERS_HPP
+#define HELPERS_HPP
 
-void show_general_help();
-void show_in_development_msg();
+#include <vector>
+#include <string>
 
-#endif // HELP_HPP
+void show_general_help(const std::vector<std::string>& args);
+void show_in_development_msg(std::vector<std::string> flag);
+
+#endif // HELPERS_HPP

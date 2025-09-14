@@ -12,7 +12,7 @@ std::unordered_map<char,std::vector<std::string>> get_flags(const int& argc, cha
 
 	// Variable to store current option
 	char opt = ' ';
-	
+
 	// Going through each argument
 	for (int i = 1; i < argc; ++i) {
 		std::string arg = argv[i];
@@ -53,16 +53,15 @@ void parse_flags(const std::unordered_map<char,std::vector<std::string>>& flags)
 
 		// If current flag is supported
 		if (supported_flags.find(opt) != supported_flags.end()) {
-			std::cout << "Found option -" << opt << '\n';
 			found = true;
-			supported_flags.at(opt).handler();
+			supported_flags.at(opt).handler(flag.second);
 		}
 
 		if (!found)
 			show_help = true;
 	}
 
-	if (show_help && flags.find('h') != flags.end()) {
-		supported_flags.at('h').handler();
+	if (show_help && flags.find('h') == flags.end()) {
+		supported_flags.at('h').handler({{}});
 	}
 }

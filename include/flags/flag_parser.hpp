@@ -1,5 +1,5 @@
-#ifndef ARGUMENT_PARSER_HPP
-#define ARGUMENT_PARSER_HPP
+#ifndef FLAG_PARSER_HPP
+#define FLAG_PARSER_HPP
 
 #include <vector>
 #include <string>
@@ -14,4 +14,4 @@ std::unordered_map<char,std::vector<std::string>> get_flags(const int& argc, cha
 
 void parse_flags(const std::unordered_map<char,std::vector<std::string>>& flags);
 
-#endif // ARGUMENT_PARSER_HPP
+#endif // FLAG_PARSER_HPP
